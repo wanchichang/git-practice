@@ -51,7 +51,6 @@ tree .git/object # 結果如下，並沒有多出新的東西
 
 由此可知，即使兩個文件位於不同目錄或使用不同的檔名，只要內容相同，Git 都會使用相同的  `blob object` 來記錄它們的內容。
 </details>
-<br />
 <details>
 
 <summary> <code>參考資料</code></summary>
@@ -85,7 +84,6 @@ git cat-file -p f63acd # git cat-file -p <sha-1 value>
 
 由此可見，一個 `tree object`可以紀錄包含哪些 `blob object` (也就是檔案內容)，以及該 `blob object`對應的檔案名稱
 </details>
-<br />
 <details>
 
 <summary> <code>參考資料</code></summary>
@@ -116,7 +114,7 @@ git cat-file -p 7b47b1 # git cat-file -p <sha-1 value>
 
 這邊就可以看到，建立一個commit之後，Git確實有建立`commit object`，以及這個object裡面的內容。
 </details>
-<br />
+
 <details>
 <summary> <code>commit message style</code></summary>
 <br />
@@ -150,7 +148,6 @@ When writing a body, the blank line between the title and the body is required a
 #### Footer
 The footer is optional and is used to reference issue tracker IDs.
 </details>
-<br />
 <details>
 
 <summary> <code>參考資料</code></summary>
@@ -164,10 +161,7 @@ The footer is optional and is used to reference issue tracker IDs.
 在 Git 中，`tag` 是一種用來標記特定提交的指針，通常用於標記重要的節點，如版本發佈點（例如 `v1.0`）。`tag` 可以幫助我們方便地找到特定的提交。
 
 Git 支援`lightweight tag`和`annotated tag`。
-<!-- <details>
-<summary> <code>簡易實驗</code></summary>
-</details>
-<br/> -->
+
 <details>
 
 <summary> <code>參考資料</code></summary>
@@ -237,7 +231,6 @@ git checkout 7b47b1d # 跳回過去某個commit
 
 
 </details>
-<br />
 <details>
 <summary> <code>參考資料</code></summary>
 
