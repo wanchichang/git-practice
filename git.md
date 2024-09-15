@@ -153,9 +153,7 @@ The footer is optional and is used to reference issue tracker IDs.
 <summary> <code>參考資料</code></summary>
 
 <https://medium.com/@flyotlin/%E4%BB%80%E9%BA%BC%E6%98%AFgit%E7%89%A9%E4%BB%B6-ebbeb3b22f9c>
- 
 <https://github.com/android/architecture-samples/issues/300>
- 
 <https://git-scm.com/book/zh-tw/v2/%E4%BD%BF%E7%94%A8-Git-%E5%88%86%E6%94%AF-%E7%B0%A1%E8%BF%B0%E5%88%86%E6%94%AF>
 </details>
 
@@ -237,9 +235,7 @@ git checkout 7b47b1d # 跳回過去某個commit
 <summary> <code>參考資料</code></summary>
 
 <https://gitbook.tw/>
- 
 <https://git-scm.com/book/zh-tw/v2/%E4%BD%BF%E7%94%A8-Git-%E5%88%86%E6%94%AF-%E7%B0%A1%E8%BF%B0%E5%88%86%E6%94%AF>
- 
 <https://titangene.github.io/article/git-detached-head.html>
 </details>
 
