@@ -2,6 +2,8 @@
 
 我們組員的nodejs版本恰好均為`v20.xxx.xxx`，至[nodejs 官網](<https://nodejs.org/en/download/package-manager>)查看後發現`v.20.17.0`為LTS(Long-Term Support)，因此我們就決定選用`v.20.17.0`這個版本。
 
+<img src="./img/node_version.png" style="width:200px"/>
+
 ### nvm & npm 
 #### nvm
 `nvm` (node version manager)是 Node.js 的版本管理工具，讓使用者能在同一系統環境上輕鬆切換不同版本的 Node.js。
@@ -23,6 +25,7 @@ nvm alias default <版本號>	#預設使用 node.js 版本
 `npm` (Node Package Manager)是 Node.js 的套件管理工具。
 
 建立`npm`專案時，會產生一個`package.json`來紀錄安裝套件的資訊。
+
 用`npm`安裝的套件會存在`node_modules`這個資料夾。
 上傳專案時，`node_modules` 不需要一併上傳，其他使用者可透過`package.json`自行安裝相關套件。
 ###### 常用指令
