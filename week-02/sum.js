@@ -20,10 +20,21 @@ function sum_reduce(ary) {
 
   return ans
 }
+function sum_map(ary) {
+  //method 3: ary.map
+  let ans = 0
+  ary.map(function (item) {
+    ans += item
+  })
+  return ans
+}
 
-console.log('method 1: ary.ForEach, ans:')
+console.log('method 1: ary.ForEach\nans:')
 console.log(sum_forEach([1, 5, 3, 2])) // 11
 console.log(sum_forEach([1, 4, 2, 7, 10])) // 24
-console.log('method 2: ary.reduce, ans:')
+console.log('\nmethod 2: ary.reduce\nans:')
+console.log(sum_reduce([1, 5, 3, 2])) // 11
+console.log(sum_reduce([1, 4, 2, 7, 10])) // 24
+console.log('\nmethod 3: ary.map\nans:')
 console.log(sum_reduce([1, 5, 3, 2])) // 11
 console.log(sum_reduce([1, 4, 2, 7, 10])) // 24
