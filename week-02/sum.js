@@ -29,6 +29,21 @@ function sum_map(ary) {
   return ans
 }
 
+// sum 1 to n
+function sum_n(n) {
+  if (n < 0) return 'n must be greater than 0'
+
+  return ((1 + n) * n) / 2
+}
+
+// method 2: recursive
+function sum_n_recursive(n) {
+  if (n <= 0) return 'n must be greater than 0'
+  if (n == 1) return 1
+  return sum_n_recursive(n - 1) + n
+}
+
+console.log('sum all elements in ary\n')
 console.log('method 1: ary.ForEach\nans:')
 console.log(sum_forEach([1, 5, 3, 2])) // 11
 console.log(sum_forEach([1, 4, 2, 7, 10])) // 24
@@ -38,3 +53,7 @@ console.log(sum_reduce([1, 4, 2, 7, 10])) // 24
 console.log('\nmethod 3: ary.map\nans:')
 console.log(sum_reduce([1, 5, 3, 2])) // 11
 console.log(sum_reduce([1, 4, 2, 7, 10])) // 24
+console.log('===========================')
+console.log('sum 1 to n\n')
+console.log(`sum_n(10) = ${sum_n(10)}`)
+console.log(`sum_n_recursive(10) = ${sum_n_recursive(10)}`)
