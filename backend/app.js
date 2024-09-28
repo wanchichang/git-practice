@@ -5,6 +5,8 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const app = express()
+
+// 若沒有設定PORT這個環境變數，預設為3000
 const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {

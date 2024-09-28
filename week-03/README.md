@@ -2,7 +2,7 @@
 - [x] AWS
 - [x] callback.js
 - [ ] promise.js（進階）
-- [ ] 建立 Express 專案
+- [x] 建立 Express 專案
 - [ ] localhost, curl(進階)
 - [x] 分組
 
