@@ -6,7 +6,7 @@
     首先我看到 `curl localhost`、`sudo systemctl start nginx` 時出錯
 
     <img src='./assets/curl_fake_server.png' width=450px>
-
+    <br />
     <img src='./assets/nginx_start_err.png' width=450px>
 
     因此我用`sudo nginx -t` 檢查 nginx 設定檔是否有問題？ 
