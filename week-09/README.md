@@ -9,9 +9,11 @@
     <img src='./assets/nginx_start_err.png'>
 
     因此我用`sudo nginx -t` 檢查 nginx 設定檔是否有問題？ 
+
     <img src='./assets/conf_syntax_err.png'>
 
     檢查後發現 `nginx.conf` 有 syntax error，將其修正。
+
     <img src='./assets/fix_syntax_err.png'>
 2. port 80 被佔用
 
@@ -40,6 +42,7 @@
 
     (圖中 `sudo iptables -A INPUT -p top --dport 80
 -j ACCEPT` 可不必執行)
+
     <img src='./assets/fix_iptable.png'>
 
 4. 權限問題
@@ -60,6 +63,7 @@
     查看 log 檔是否佔用大量空間
 
     <img src='./assets/log.png' width=350px>
+    <br/>
     <img src='./assets/largefile.png' width=350px>
 
     到 `/var/log/system` 刪除不必要的檔案
