@@ -5,16 +5,17 @@
 
     首先我看到 `curl localhost`、`sudo systemctl start nginx` 時出錯
 
-    <img src='./assets/curl_fake_server.png' width=400px>
-    <img src='./assets/nginx_start_err.png' width=400px>
+    <img src='./assets/curl_fake_server.png' width=450px>
+
+    <img src='./assets/nginx_start_err.png' width=450px>
 
     因此我用`sudo nginx -t` 檢查 nginx 設定檔是否有問題？ 
 
-    <img src='./assets/conf_syntax_err.png' width=400px>
+    <img src='./assets/conf_syntax_err.png' width=450px>
 
     檢查後發現 `nginx.conf` 有 syntax error，將其修正。
 
-    <img src='./assets/fix_syntax_err.png' width=400px>
+    <img src='./assets/fix_syntax_err.png' width=450px>
 2. port 80 被佔用
 
     修正完 syntax err 後，執行 `sudo systemctl start nginx` 、 `sudo systemctl status nginx` 仍會報錯
@@ -27,7 +28,7 @@
 
     (下圖是我課後自己重做一遍的截圖，因此 ip 和其他截圖不同)
 
-    <img src='./assets/kill_srv_1.png' width=400px>
+    <img src='./assets/kill_srv_1.png' width=450px>
 
 3. 防火牆
 
@@ -43,13 +44,13 @@
     (圖中 `sudo iptables -A INPUT -p top --dport 80
 -j ACCEPT` 可不必執行)
 
-    <img src='./assets/fix_iptable.png' width=400px>
+    <img src='./assets/fix_iptable.png' width=450px>
 
 4. 權限問題
 
     解決防火牆問題後，curl localhost 卻顯示 403 Forbidden。
 
-    <img src='./assets/curl403.png' width=400px>
+    <img src='./assets/curl403.png' width=450px>
 
     從 403 Forbidden 猜想可能是權限的問題。
     查看設定檔 `/etc/nginx/sites-enabled/default` ，發現其中有指定 `root /var/myweb`，接著查看 `/var/myweb/` 的權限，並更改至 644，即可成功 `curl localhost`。
@@ -58,17 +59,17 @@
     
 5. 硬碟爆炸
 
-    <img src='./assets/disk.png' width=400px>
+    <img src='./assets/disk.png' width=450px>
 
     查看 log 檔是否佔用大量空間
 
-    <img src='./assets/log.png' width=400px>
+    <img src='./assets/log.png' width=450px>
     <br/>
-    <img src='./assets/largefile.png' width=400px>
+    <img src='./assets/largefile.png' width=450px>
 
     到 `/var/log/system` 刪除不必要的檔案
 
-    <img src='./assets/rm_largefile.png' width=400px>
+    <img src='./assets/rm_largefile.png' width=450px>
     
 
 ### 感想
